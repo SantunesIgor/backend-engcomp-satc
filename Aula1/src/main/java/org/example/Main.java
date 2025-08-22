@@ -58,12 +58,10 @@ public class Main {
     }
 
     public static void exercicio01() {
-        // Exercício 1
         System.out.println("Bem-vindo ao Sistema de Geração de Jogadores!");
     }
 
     public static void exercicio02() {
-        // Exercício 2
         String nome = "Mariana Silva";
         String cargo = "Analista de Sistemas";
         double salario = 4500.00;
@@ -74,7 +72,6 @@ public class Main {
     }
 
     public static void exercicio03() {
-        // Exercício 3
         String nome = "Teclado";
         int codigo = 12345;
         double preco = 99.90;
@@ -87,7 +84,6 @@ public class Main {
     }
 
     public static void exercicio04(double valorTotal) {
-        // Exercício 4
         if (valorTotal > 100) {
             double valorFinal = valorTotal * 0.9;
             System.out.printf("Valor final com desconto: R$ %.2f\n", valorFinal);
@@ -97,7 +93,6 @@ public class Main {
     }
 
     public static void exercicio05(int idade) {
-        // Exercício 5
         if (idade < 12) {
             System.out.println("Categoria: Infantil");
         } else if (idade <= 17) {
@@ -108,7 +103,6 @@ public class Main {
     }
 
     public static void exercicio06() {
-        // Exercício 6
         int[] notas = {7, 8, 6, 9, 10};
         int soma = 0;
         System.out.print("Notas: ");
@@ -122,18 +116,15 @@ public class Main {
     }
 
     public static double calcularIMC(double peso, double altura) {
-        // Método auxiliar para Exercício 7
         return peso / (altura * altura);
     }
 
     public static void exercicio07(double peso, double altura) {
-        // Exercício 7
         double imc = calcularIMC(peso, altura);
         System.out.printf("IMC calculado: %.2f\n", imc);
     }
 
     public static void exercicio08(String nome) {
-        // Exercício 8
         int numCaracteres = nome.replace(" ", "").length();
         System.out.println("Número de caracteres: " + numCaracteres);
         System.out.println("Maiúsculas: " + nome.toUpperCase());
