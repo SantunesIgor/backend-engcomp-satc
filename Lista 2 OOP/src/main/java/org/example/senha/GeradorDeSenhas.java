@@ -2,25 +2,20 @@ package org.example.senha;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 public class GeradorDeSenhas {
     public static void main(String[] args) {
-        // Também seria possível obter os chars usando o método .charAt(index)
-        Random rand = new Random();
+        Scanner sc = new Scanner(System.in);
 
-        String charString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        ArrayList<Character> charList = new ArrayList<>();
-        StringBuilder senha = new StringBuilder();
+        System.out.print("Digite a quantidade de caracteres: ");
+        int quant = sc.nextInt();
 
-        for (char c : charString.toCharArray()) {
-            charList.add(c);
-        }
+        Senha senha = new Senha(quant);
 
-        while (senha.length() < 8) {
-            senha.append(charList.get(rand.nextInt(charList.size())));
-        }
+        System.out.println("Senha gerada: " + senha.getSenha());
 
-        System.out.println(senha);
+        sc.close();
     }
 }
 

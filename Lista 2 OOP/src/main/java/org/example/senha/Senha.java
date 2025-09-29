@@ -16,10 +16,16 @@ public class Senha {
     public String gerarSenha() {
         Random rand = new Random();
 
-        StringBuilder senha = new StringBuilder();
+        StringBuilder stringSenha = new StringBuilder();
 
-        while (senha.length() < 8) {
-            senha.append(charList.get(rand.nextInt(charList.size())));
+        while (stringSenha.length() < this.tamanho) {
+            stringSenha.append(charString.charAt(rand.nextInt(charString.length())));
         }
+
+        return stringSenha.toString();
+    }
+
+    public String getSenha() {
+        return valor;
     }
 }

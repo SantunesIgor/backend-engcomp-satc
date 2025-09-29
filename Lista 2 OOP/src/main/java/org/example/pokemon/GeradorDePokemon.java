@@ -7,56 +7,28 @@ import java.util.Scanner;
 
 public class GeradorDePokemon {
     public static void main(String[] args) {
-        Random rand = new Random();
-        Scanner scan = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        ArrayList<String> nomes = new ArrayList<>(Arrays.asList(
-                "Pikachu",
-                "Charmander",
-                "Bulbasaur",
-                "Squirtle",
-                "Jigglypuff",
-                "Meowth",
-                "Psyduck",
-                "Eevee",
-                "Snorlax",
-                "Gengar"
-        ));
+        System.out.print("Digite a quantidade de pokemons que serão criados: ");
+        int quantCriados = sc.nextInt();
 
-        ArrayList<String> tipos = new ArrayList<>(Arrays.asList(
-                "Normal",
-                "Fogo",
-                "Água",
-                "Elétrico",
-                "Grama",
-                "Gelo",
-                "Lutador",
-                "Venenoso",
-                "Terrestre",
-                "Voador",
-                "Psíquico",
-                "Inseto",
-                "Pedra",
-                "Fantasma",
-                "Dragão",
-                "Sombrio",
-                "Aço",
-                "Fada"
-        ));
+        ArrayList<Pokemon> pokemons = new ArrayList<>();
 
-        int nivel = rand.nextInt(99) + 1;
+        for(int i = 0; i < quantCriados; i++) {
+            pokemons.add(new Pokemon());
+        }
 
-        System.out.print("Digite a quantidade de pokémons que serão gerados: ");
-        int quant = scan.nextInt();
-
-        for(int i = 0; i < quant; i++) {
+        System.out.println("\nPokemons criados: ");
+        for(Pokemon p : pokemons) {
             System.out.println(
-                    nomes.get(rand.nextInt(nomes.size())) +
-                            " é um Pokémon do tipo " +
-                            tipos.get(rand.nextInt(tipos.size())) +
-                            " de nível " +
-                            nivel + "."
+                    p.getNome() +
+                    " é um Pokémon do tipo " +
+                    p.getTipo() +
+                    " de nível " +
+                    p.getNivel() + "."
             );
         }
+
+        sc.close();
     }
 }
