@@ -15,7 +15,7 @@ public class Biogerador {
         if(cargaAtual >= cargaMaxima){
             throw new GeradorCheioException("O gerador está cheio!");
         }
-        float potenciaGerada = b.processar() * 2.36f;
+        float potenciaGerada = b.Processar() * 2.36f;
         this.potenciaAtual = this.potenciaAtual + potenciaGerada;
         cargaAtual++;
     }

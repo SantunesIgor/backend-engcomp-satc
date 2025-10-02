@@ -3,7 +3,7 @@ package org.example;
 import java.util.Random;
 
 public class Biocombustivel {
-    private float quilogramas;
+    protected float quilogramas;
 
     public Biocombustivel(){
         this.quilogramas = 1000;
@@ -13,7 +13,7 @@ public class Biocombustivel {
         this.quilogramas = quilogramas;
     }
 
-    public float processar(){
+    public float Processar(){
         Random rand = new Random();
         return this.quilogramas * rand.nextInt(3) + 1;
     }
