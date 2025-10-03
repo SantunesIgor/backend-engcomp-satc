@@ -18,4 +18,20 @@ public class BasePorto {
     public void desatracarBarco(Barco b){
         barcosAtracados.remove(b);
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public ArrayList<Barco> getBarcosAtracados() {
+        return barcosAtracados;
+    }
+
+    public void setBarcosAtracados(ArrayList<Barco> barcosAtracados) {
+        this.barcosAtracados = barcosAtracados;
+    }
 }
