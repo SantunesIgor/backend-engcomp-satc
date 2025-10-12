@@ -24,8 +24,8 @@ public class TimeDeFutebolController {
     }
 
     @PutMapping("/jogador/{posicao}")
-    public String substituicao(Jogador r, @PathVariable int posicao){
-        return timeDeFutebolService.substituicao(r, posicao);
+    public Jogador substituicao(@PathVariable int posicao){
+        return timeDeFutebolService.substituicao(posicao);
     }
 
 }

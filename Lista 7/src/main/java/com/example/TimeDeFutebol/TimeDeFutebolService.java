@@ -1,5 +1,6 @@
 package com.example.TimeDeFutebol;
 
+import org.apache.tomcat.Jar;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ public class TimeDeFutebolService {
     protected ArrayList<Jogador> principais = new ArrayList<>();
     protected ArrayList<Jogador> reservas = new ArrayList<>();
 
-    public TimeDeFutebolService(){
+    public TimeDeFutebolService() {
         principais.add(new Jogador("Rayan", 11, 33));
         principais.add(new Jogador("Nuno Moreira", 10, 25));
         principais.add(new Jogador("Vegetti", 9, 27));
@@ -31,15 +32,30 @@ public class TimeDeFutebolService {
 
     }
 
-    public List<Jogador> listarPrincipais(){
+    public List<Jogador> listarPrincipais() {
         return principais;
     }
 
-    public List<Jogador> listarReservas(){
+    public List<Jogador> listarReservas() {
         return reservas;
     }
 
-    public String substituicao(Jogador r, int posicao){
-        return "Fuck the police";
+    public Jogador substituicao(int posicao) {
+        for (Jogador j : principais) {
+            if (j.getPosicao() == posicao) {
+                Jogador novoPrincipal = reservas.get(0);
+                reservas.remove(reservas.get(0));
+
+                novoPrincipal.setPosicao(posicao);
+                j.setPosicao(0);
+
+                principais.remove(j);
+                principais.add(novoPrincipal);
+                reservas.add(j);
+
+                return novoPrincipal;
+            }
+        }
+        return null;
     }
 }
