@@ -18,10 +18,10 @@ Cada pasta contém os exercícios, listas ou desafios correspondentes à aula ou
 
 ## 📂 Conteúdos
 
-### Lista 1 - Principios de Java
-### Lista 2 - Classe Random
-### Lista 3 - POO (Deitel)
-### Lista 4 - POO (Biogerador)
-### Lista 5 - POO
-### Lista 6 - Spring
-### Lista 7 - HTTP e REST
+- Lista 1 - Principios de Java
+- Lista 2 - Classe Random
+- Lista 3 - POO (Deitel)
+- Lista 4 - POO (Biogerador)
+- Lista 5 - POO
+- Lista 6 - Spring
+- Lista 7 - HTTP e REST
