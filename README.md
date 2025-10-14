@@ -26,3 +26,4 @@ Cada pasta contém os exercícios, listas ou desafios correspondentes à aula ou
 - Lista 6 - Spring
 - Lista 7 - HTTP e REST
 - Lista 8 - Modelagem REST
+- Lista 9 - API Externa, DTO
