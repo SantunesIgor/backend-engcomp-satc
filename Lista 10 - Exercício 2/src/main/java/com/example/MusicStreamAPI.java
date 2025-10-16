@@ -1,11 +1,11 @@
-package com.example.JogadorAPI;
+package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JogadorApplication {
+public class MusicStreamAPI {
     public static void main(String[] args){
-        SpringApplication.run(JogadorApplication.class, args);
+        SpringApplication.run(MusicStreamAPI.class, args);
     }
 }
