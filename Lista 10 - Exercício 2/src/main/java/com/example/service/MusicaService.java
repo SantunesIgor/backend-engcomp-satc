@@ -1,11 +1,11 @@
 package com.example.service;
 
-import com.example.repository.MusicStreamRepository;
+import com.example.repository.MusicaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MusicStreamService {
+public class MusicaService {
     @Autowired
-    private MusicStreamRepository repository;
+    private MusicaRepository repository;
 }

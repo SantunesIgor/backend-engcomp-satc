@@ -1,13 +1,13 @@
 package com.example.controller;
 
-import com.example.service.MusicStreamService;
+import com.example.service.MusicaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/")
-public class MusicStreamController {
+public class MusicaController {
     @Autowired
-    private MusicStreamService service;
+    private MusicaService service;
 }
